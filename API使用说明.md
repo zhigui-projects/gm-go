@@ -14,6 +14,15 @@ go get -u github.com/tjfoc/gmsm
 ```Go
 import github.com/tjfoc/gmsm/sm3
 ```
+go.mod 添加
+```
+replace github.com/tjfoc/gmsm => github.com/zhigui-projects/gmsm v1.2.1
+
+require github.com/tjfoc/gmsm v1.2.0
+```
+```
+go mod tidy
+```
 
 ### 代码示例
 

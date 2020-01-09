@@ -54,6 +54,8 @@ var (
 	oidAES256CBC = asn1.ObjectIdentifier{2, 16, 840, 1, 101, 3, 4, 1, 42}
 
 	oidSM2 = asn1.ObjectIdentifier{1, 2, 840, 10045, 2, 1}
+
+	oidNamedCurveP256SM2 = asn1.ObjectIdentifier{1, 2, 156, 10197, 1, 301}
 )
 
 // reference to https://www.rfc-editor.org/rfc/rfc5958.txt
@@ -110,6 +112,13 @@ type pkcs8 struct {
 	Version    int
 	Algo       pkix.AlgorithmIdentifier
 	PrivateKey []byte
+}
+
+// pkixPublicKey reflects a PKIX public key structure. See SubjectPublicKeyInfo
+// in RFC 3280.
+type pkixPublicKey struct {
+	Algo      pkix.AlgorithmIdentifier
+	BitString asn1.BitString
 }
 
 // copy from crypto/pbkdf2.go
