@@ -404,12 +404,12 @@ func WritePrivateKeytoMem(key *PrivateKey, pwd []byte) ([]byte, error) {
 	}
 	if pwd != nil {
 		block = &pem.Block{
-			Type:  "ENCRYPTED PRIVATE KEY",
+			Type:  "ENCRYPTED SM2 PRIVATE KEY",
 			Bytes: der,
 		}
 	} else {
 		block = &pem.Block{
-			Type:  "PRIVATE KEY",
+			Type:  "SM2 PRIVATE KEY",
 			Bytes: der,
 		}
 	}
@@ -425,12 +425,12 @@ func WritePrivateKeytoPem(FileName string, key *PrivateKey, pwd []byte) (bool, e
 	}
 	if pwd != nil {
 		block = &pem.Block{
-			Type:  "ENCRYPTED PRIVATE KEY",
+			Type:  "ENCRYPTED SM2 PRIVATE KEY",
 			Bytes: der,
 		}
 	} else {
 		block = &pem.Block{
-			Type:  "PRIVATE KEY",
+			Type:  "SM2 PRIVATE KEY",
 			Bytes: der,
 		}
 	}

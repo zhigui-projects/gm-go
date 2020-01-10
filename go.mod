@@ -1,3 +1,3 @@
-module github.com/tjfoc/gmsm
+module github.com/zhigui-projects/gmsm
 
 go 1.13
