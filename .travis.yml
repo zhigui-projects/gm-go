@@ -1,14 +1,14 @@
 sudo: false
-language: 
+language:
   - go
 go:
-  - 1.8.3
+  - 1.12.12
 
 #before_install:
   #- git rm -r --cached .
   #- git add .
   #- git commit -m 'update .gitignore'
-  
+
 install:
   - go get -v github.com/golang/lint/golint
   - go build -v ./sm2
@@ -38,6 +38,6 @@ notifications:
       - yanwenze@tj-fintech.com
       - maoxiuze@tj-fintech.com
       - yewei@tj-fintech.com
-      
+
     on_success: never # default: change
     on_failure: never # default: always

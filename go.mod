@@ -1,5 +1,3 @@
-module github.com/zhigui-projects/gmsm
+module gitlab.ziggurat.cn/guomi/gm-go
 
-go 1.13
-
-require golang.org/x/crypto v0.0.0-20191219195013-becbf705a915
+go 1.12
