@@ -30,7 +30,7 @@ import (
 	"io"
 	"math/big"
 
-	"gitlab.ziggurat.cn/guomi/gm-go/sm3"
+	"github.com/zhigui-projects/gm-go/sm3"
 )
 
 var (
