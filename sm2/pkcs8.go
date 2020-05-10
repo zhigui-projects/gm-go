@@ -286,7 +286,7 @@ func ParsePKCS8EcryptedPrivateKey(der, pwd []byte) (*PrivateKey, error) {
 }
 
 func ParsePKCS8PrivateKey(der, pwd []byte) (*PrivateKey, error) {
-	if pwd == nil {
+	if len(pwd) == 0 {
 		return ParsePKCS8UnecryptedPrivateKey(der)
 	}
 	return ParsePKCS8EcryptedPrivateKey(der, pwd)
@@ -370,7 +370,7 @@ func MarshalSm2EcryptedPrivateKey(PrivKey *PrivateKey, pwd []byte) ([]byte, erro
 }
 
 func MarshalSm2PrivateKey(key *PrivateKey, pwd []byte) ([]byte, error) {
-	if pwd == nil {
+	if len(pwd) == 0 {
 		return MarshalSm2UnecryptedPrivateKey(key)
 	}
 	return MarshalSm2EcryptedPrivateKey(key, pwd)
